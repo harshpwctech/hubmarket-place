@@ -9,6 +9,7 @@
  "field_order": [
   "hub_item",
   "user",
+  "full_name",
   "section_break_blsai",
   "rating",
   "review"
@@ -45,11 +46,18 @@
    "fieldname": "review",
    "fieldtype": "Small Text",
    "label": "Review"
+  },
+  {
+   "fetch_from": "user.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-09 19:27:04.734197",
+ "modified": "2024-12-30 12:51:20.531309",
  "modified_by": "Administrator",
  "module": "Hub Marketplace",
  "name": "Hub Item Review",

@@ -46,6 +46,8 @@ def update_seller_info(seller_data):
         hub_seller = frappe.get_last_doc("Hub Seller", filters={"erpnext_url": seller_data.get("erpnext_url")})
         hub_seller.update(hub_seller_data)
     
+    frappe.db.commit()
+    
     for w in seller_data.get("warehouse_details"):
         address = w.get("address")
         address_data = {

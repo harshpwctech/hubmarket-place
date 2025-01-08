@@ -9,13 +9,16 @@
  "engine": "InnoDB",
  "field_order": [
   "buyer",
+  "company_name",
+  "contact_number",
+  "section_break_svhrw",
   "item",
+  "remarks",
   "column_break_2zhzz",
   "default_seller",
   "contact_sellers",
   "section_break_3edzd",
-  "hub_sellers",
-  "remarks"
+  "hub_sellers"
  ],
  "fields": [
   {
@@ -64,11 +67,25 @@
   {
    "fieldname": "section_break_3edzd",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "section_break_svhrw",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-10 14:11:55.347109",
+ "modified": "2024-12-30 17:36:55.432191",
  "modified_by": "Administrator",
  "module": "Hub Marketplace",
  "name": "Hub Lead",
