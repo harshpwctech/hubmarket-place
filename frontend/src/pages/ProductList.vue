@@ -1,13 +1,16 @@
 <template>
-    <NavBar />
-    <div :key="key">
-        <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-8 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900">{{ categoryName }}</h2>
-        </div>
-        <ProductFilters :categoryName="categoryName" :subCategoryName="subCategoryName"/>
+    <div class="navbar">
+        <NavBar />
     </div>
-    <Footer />
-    
+    <div class="content">
+        <div :key="key">
+            <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-8 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">{{ categoryName }}</h2>
+            </div>
+            <ProductFilters :categoryName="categoryName" :subCategoryName="subCategoryName"/>
+        </div>
+        <Footer />
+    </div>
 </template>
   
 <script setup>

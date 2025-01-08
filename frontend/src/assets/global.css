@@ -18,6 +18,20 @@
   .form-control {
     border-color: var(--theme-color);
   }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it appears above other content */
+  background-color: #ffffff; /* Add a background color to avoid transparency issues */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
+.content {
+  padding-top: 80px; /* Adjust this value to match the height of your navbar */
+}
+
   
   /* Add more global styles as needed */
   

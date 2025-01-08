@@ -1,5 +1,8 @@
 <template>
+  <div class="navbar">
     <NavBar />
+  </div>
+  <div class="content">
     <div :key="key">
       <ProductDetails :productName="productName"/>
       <section aria-labelledby="reviews-heading" class="mx-auto max-w-7xl overflow-hidden">
@@ -14,6 +17,7 @@
       </div>
     </div>
     <Footer />
+  </div>
 </template>
   
 <script setup>

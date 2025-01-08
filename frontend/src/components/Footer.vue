@@ -76,7 +76,7 @@ const footerNavigation = {
   ],
   seller: [
     { name: 'Seller Categories', href: '/hub_marketplace/seller_categories' },
-    { name: 'Sell on Hub Marketplace', href: '#' },
+    { name: 'Sell on Hub Marketplace', href: 'https://hubmarket.place/join-as-seller' },
   ],
   buyer: [
     { name: 'Manage Account', href: '#' },

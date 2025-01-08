@@ -1,33 +1,37 @@
 <template #node="{ node, hasChildren, isCollapsed, toggleCollapsed }">
-    <NavBar />
-    <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-8 sm:px-6 lg:px-4">
-        <div class="mb-8">
-            <p class="text-xl text-center mb-2 text-gray">Categories available for sellers on hubmarket.place</p>
-            <p class="text-sm text-center text-gray-600">New categories shall be added periodically as per the demand from the sellers.</p>
-        </div>
-        <!-- <div class="px-4 pb-8 sm:px-6 lg:px-4">
-        <TextInput
-            :type="'search'"
-            :ref_for="true"
-            size="sm"
-            variant="subtle"
-            placeholder="Search categories..."
-            :disabled="false"
-            v-model="searchQuery"
-        />
-        </div> -->
-        <div v-if="isLoading" class="space-y-4 px-4">
-            <!-- Skeleton Loader -->
-            <div v-for="i in 10" :key="i" class="h-8 bg-gray-200 rounded animate-pulse"></div>
-        </div>
-        <div v-else>
-            <div v-for="(categoryNode, index) in filteredCategories" :key="index" class="mb-2 px-4 sm:px-4 lg:px-8">
-                <Tree :options="{
-                    showIndentationGuides: categoryNode.showIndentationGuides,
-                    rowHeight: categoryNode.rowHeight,
-                    indentWidth: categoryNode.indentWidth,
-                }" nodeKey="name" :node="categoryNode.node" />
+    <div class="navbar">
+        <NavBar />
+    </div>
+    <div class="content">
+        <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-8 sm:px-6 lg:px-4">
+            <div class="mb-8">
+                <p class="text-xl text-center mb-2 text-gray">Categories available for sellers on hubmarket.place</p>
+                <p class="text-sm text-center text-gray-600">New categories shall be added periodically as per the demand from the sellers.</p>
+            </div>
+            <!-- <div class="px-4 pb-8 sm:px-6 lg:px-4">
+            <TextInput
+                :type="'search'"
+                :ref_for="true"
+                size="sm"
+                variant="subtle"
+                placeholder="Search categories..."
+                :disabled="false"
+                v-model="searchQuery"
+            />
+            </div> -->
+            <div v-if="isLoading" class="space-y-4 px-4">
+                <!-- Skeleton Loader -->
+                <div v-for="i in 10" :key="i" class="h-8 bg-gray-200 rounded animate-pulse"></div>
+            </div>
+            <div v-else>
+                <div v-for="(categoryNode, index) in filteredCategories" :key="index" class="mb-2 px-4 sm:px-4 lg:px-8">
+                    <Tree :options="{
+                        showIndentationGuides: categoryNode.showIndentationGuides,
+                        rowHeight: categoryNode.rowHeight,
+                        indentWidth: categoryNode.indentWidth,
+                    }" nodeKey="name" :node="categoryNode.node" />
 
+                </div>
             </div>
         </div>
     </div>

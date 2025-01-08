@@ -1,22 +1,26 @@
 <template>
-    <NavBar />
-    <div v-if="!isLoading">
-        <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-10 sm:px-6 lg:px-8">
-            <div class="flex items-center space-x-6">
-                <!-- Seller Logo -->
-                <div class="border border-gray-300 rounded-full w-20 h-20 bg-white">
-                    <img :src="sellerDetails.logo" :alt="sellerDetails.seller_name" class="object-contain w-full h-full" loading="lazy" />
-                </div>
-                <!-- Seller Name -->
-                <div>
-                    <h2 class="text-2xl font-bold">{{ sellerDetails.seller_name }}</h2>
-                    <p>Mumbai, India</p>
+    <div class="navbar">
+        <NavBar />
+    </div>
+    <div class="content">
+        <div v-if="!isLoading">
+            <div class="mx-auto max-w-7xl overflow-hidden px-4 pt-10 sm:px-6 lg:px-8">
+                <div class="flex items-center space-x-6">
+                    <!-- Seller Logo -->
+                    <div class="border border-gray-300 rounded-full w-20 h-20 bg-white">
+                        <img :src="sellerDetails.logo" :alt="sellerDetails.seller_name" class="object-contain w-full h-full" loading="lazy" />
+                    </div>
+                    <!-- Seller Name -->
+                    <div>
+                        <h2 class="text-2xl font-bold">{{ sellerDetails.seller_name }}</h2>
+                        <p>Mumbai, India</p>
+                    </div>
                 </div>
             </div>
+            <SellerFilters :seller="sellerDetails" />
         </div>
-        <SellerFilters :seller="sellerDetails" />
+        <Footer />
     </div>
-    <Footer />
 </template>
   
 <script setup>

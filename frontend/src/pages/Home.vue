@@ -1,5 +1,8 @@
 <template>
-  <NavBar />
+  <div class="navbar">
+      <NavBar />
+  </div>
+  <div class="content">
   <div v-if="!isLoading">
     <div v-for="(items, category) in productList" :key="category">
       <div class="mx-auto max-w-7xl overflow-hidden py-8 px-4 sm:px-6 lg:px-8">
@@ -24,6 +27,7 @@
     <SkeletonGrid />
   </div>
   <Footer />
+</div>
 </template>
 
 <script setup>

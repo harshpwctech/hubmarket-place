@@ -4,7 +4,7 @@
             <div id="banner" v-if="showBanner"
                 class="flex h-8 items-center justify-center bg-[var(--theme-color)] px-4 text-sm font-medium text-gray-800 sm:px-6 lg:px-8">
                 <p class="text-white">
-                    Get listed as a Seller (<a href="#">click here</a>).
+                    Get listed as a Seller (<a href="https://hubmarket.place/join-as-seller" target="_blank">click here</a>).
                 </p>
                 <button @click="closeBanner" class="text-gray-800 absolute right-4">
                     <XMarkIcon class="h-5 w-5 text-white" aria-hidden="true" />
